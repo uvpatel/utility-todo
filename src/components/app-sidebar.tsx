@@ -15,12 +15,12 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from "@/components/ui/sidebar"
-import { LayoutDashboardIcon, ListIcon, CameraIcon, FileTextIcon, Settings2Icon, CircleHelpIcon, SearchIcon, DatabaseIcon, FileChartColumnIcon, FileIcon, CommandIcon } from "lucide-react"
+import { LayoutDashboardIcon, ListIcon, CalendarCheckIcon, FileTextIcon, Settings2Icon, CircleHelpIcon, SearchIcon, DatabaseIcon, FileChartColumnIcon, FileIcon, CommandIcon } from "lucide-react"
 
 const data = {
   user: {
-    name: "shadcn",
-    email: "m@example.com",
+    name: "Workspace",
+    email: "tasks@utility.local",
     avatar: "/avatars/shadcn.jpg",
   },
   navMain: [
@@ -43,9 +43,9 @@ const data = {
   ],
   navClouds: [
     {
-      title: "Capture",
+      title: "Today",
       icon: (
-        <CameraIcon
+        <CalendarCheckIcon
         />
       ),
       isActive: true,
@@ -164,7 +164,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
             >
               <a href="/dashboard">
                 <CommandIcon className="size-5!" />
-                <span className="text-base font-semibold">Acme Inc.</span>
+                <span className="text-base font-semibold">Utility Todo</span>
               </a>
             </SidebarMenuButton>
           </SidebarMenuItem>
