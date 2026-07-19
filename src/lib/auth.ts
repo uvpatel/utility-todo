@@ -10,6 +10,10 @@ const db = drizzle(new Pool({ connectionString: process.env.DATABASE_URL }), {
 
 export const auth = betterAuth({
   database: drizzleAdapter(db, { provider: "pg", schema }),
+
+  trustedOrigins: [
+      "https://utility-todo.vercel.app",
+  ],
   baseURL:
     process.env.BETTER_AUTH_URL ??
     process.env.NEXT_PUBLIC_APP_URL ??
