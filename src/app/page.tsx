@@ -48,6 +48,7 @@ export default function Home() {
             <span className="flex size-9 items-center justify-center rounded-lg border bg-card shadow-sm">
               <CommandIcon className="size-4" />
             </span>
+            
             Utility Todo
           </Link>
           <div className="hidden items-center gap-2 md:flex">
