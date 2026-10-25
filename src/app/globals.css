@@ -7,9 +7,9 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: "Geist", "Geist Fallback", ui-sans-serif, system-ui, sans-serif;
-  --font-mono: "Geist Mono", "Geist Mono Fallback", ui-monospace, monospace;
-  --font-heading: "Geist", "Geist Fallback", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+  --font-heading: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -39,82 +39,250 @@
   --color-popover: var(--popover);
   --color-card-foreground: var(--card-foreground);
   --color-card: var(--card);
-  --radius-sm: calc(var(--radius) * 0.6);
-  --radius-md: calc(var(--radius) * 0.8);
-  --radius-lg: var(--radius);
-  --radius-xl: calc(var(--radius) * 1.4);
-  --radius-2xl: calc(var(--radius) * 1.8);
-  --radius-3xl: calc(var(--radius) * 2.2);
-  --radius-4xl: calc(var(--radius) * 2.6);
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-2xl: 20px;
 }
 
 :root {
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.205 0 0);
-  --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.922 0 0);
-  --input: oklch(0.922 0 0);
-  --ring: oklch(0.708 0 0);
-  --chart-1: oklch(0.87 0 0);
-  --chart-2: oklch(0.556 0 0);
-  --chart-3: oklch(0.439 0 0);
-  --chart-4: oklch(0.371 0 0);
-  --chart-5: oklch(0.269 0 0);
-  --radius: 0.625rem;
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: oklch(0.205 0 0);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-foreground: oklch(0.205 0 0);
-  --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
+  /* Notion Light Workspace Palette (DESIGN.md & landingpagedesign.md) */
+  --background: #FBFBFA;
+  --foreground: #111111;
+  --card: #FFFFFF;
+  --card-foreground: #111111;
+  --popover: #FFFFFF;
+  --popover-foreground: #111111;
+  --primary: #2383E2;
+  --primary-foreground: #FFFFFF;
+  --secondary: #F7F7F5;
+  --secondary-foreground: #111111;
+  --muted: #F1F1EF;
+  --muted-foreground: #5F5E5B;
+  --accent: #F1F1EF;
+  --accent-foreground: #111111;
+  --destructive: #E5533D;
+  --destructive-foreground: #FFFFFF;
+  --border: #E9E9E7;
+  --input: #E9E9E7;
+  --ring: #2383E2;
+  --radius: 0.75rem;
+
+  /* Sidebar */
+  --sidebar: #FBFBFA;
+  --sidebar-foreground: #111111;
+  --sidebar-primary: #2383E2;
+  --sidebar-primary-foreground: #FFFFFF;
+  --sidebar-accent: #F1F1EF;
+  --sidebar-accent-foreground: #111111;
+  --sidebar-border: #E9E9E7;
+  --sidebar-ring: #2383E2;
+
+  /* Charts */
+  --chart-1: #2383E2;
+  --chart-2: #2A9D8F;
+  --chart-3: #E8A21C;
+  --chart-4: #E5533D;
+  --chart-5: #62AEF0;
 }
 
 .dark {
-  --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.205 0 0);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.205 0 0);
-  --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.922 0 0);
-  --primary-foreground: oklch(0.205 0 0);
-  --secondary: oklch(0.269 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.269 0 0);
-  --accent-foreground: oklch(0.985 0 0);
-  --destructive: oklch(0.704 0.191 22.216);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.556 0 0);
-  --chart-1: oklch(0.87 0 0);
-  --chart-2: oklch(0.556 0 0);
-  --chart-3: oklch(0.439 0 0);
-  --chart-4: oklch(0.371 0 0);
-  --chart-5: oklch(0.269 0 0);
-  --sidebar: oklch(0.205 0 0);
-  --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.269 0 0);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.556 0 0);
+  /* Notion-inspired high-contrast dark palette for app workspace (DESIGN.md) */
+  --background: #191918;
+  --foreground: #FFFFFF;
+  --card: #20201F;
+  --card-foreground: #FFFFFF;
+  --popover: #20201F;
+  --popover-foreground: #FFFFFF;
+  --primary: #0075DE;
+  --primary-foreground: #FFFFFF;
+  --secondary: #262625;
+  --secondary-foreground: #FFFFFF;
+  --muted: #282827;
+  --muted-foreground: #999999;
+  --accent: #2E2E2D;
+  --accent-foreground: #FFFFFF;
+  --destructive: #F77463;
+  --destructive-foreground: #FFFFFF;
+  --border: #2E2E2D;
+  --input: #2E2E2D;
+  --ring: #0075DE;
+
+  /* Sidebar */
+  --sidebar: #191918;
+  --sidebar-foreground: #FFFFFF;
+  --sidebar-primary: #0075DE;
+  --sidebar-primary-foreground: #FFFFFF;
+  --sidebar-accent: #262625;
+  --sidebar-accent-foreground: #FFFFFF;
+  --sidebar-border: #2E2E2D;
+  --sidebar-ring: #0075DE;
+
+  /* Charts */
+  --chart-1: #0075DE;
+  --chart-2: #2A9D99;
+  --chart-3: #FFC95E;
+  --chart-4: #F77463;
+  --chart-5: #62AEF0;
+}
+
+/* Notion Adaptive Workspace */
+.notion-workspace {
+  background-color: var(--background);
+  color: var(--foreground);
+}
+
+/* Scoped Landing Page Design Tokens (docs/landingpagedesign.md & visual reference) */
+.landing-page {
+  --lp-bg: #FFFFFF;
+  --lp-bg-subtle: #F7F7F5;
+  --lp-bg-muted: #F1F1EF;
+  --lp-text: #111111;
+  --lp-text-2: #5F5E5B;
+  --lp-text-3: #9B9A97;
+  --lp-border: #E9E9E7;
+  --lp-accent: #2383E2;
+  --lp-accent-hover: #0F6FCC;
+  --lp-accent-soft: #E3F0FD;
+  --lp-tag-green: #DBEDDB;
+  --lp-tag-blue: #D3E5EF;
+  --lp-tag-pink: #F5E0E9;
+  --lp-tag-yellow: #FDECC8;
+  --lp-tone-red: #E5533D;
+  --lp-tone-blue: #2F5FA8;
+  --lp-tone-amber: #E8A21C;
+  background-color: var(--lp-bg);
+  color: var(--lp-text);
+  color-scheme: light;
+}
+
+.dark .landing-page,
+.landing-page.dark {
+  --lp-bg: #191918;
+  --lp-bg-subtle: #20201F;
+  --lp-bg-muted: #262625;
+  --lp-text: #FFFFFF;
+  --lp-text-2: #A5A5A4;
+  --lp-text-3: #73726E;
+  --lp-border: #2E2E2D;
+  --lp-accent: #0075DE;
+  --lp-accent-hover: #2383E2;
+  --lp-accent-soft: rgba(0, 117, 222, 0.18);
+  --lp-tag-green: #1C3829;
+  --lp-tag-blue: #182C40;
+  --lp-tag-pink: #3D2231;
+  --lp-tag-yellow: #3F3316;
+  --lp-tone-red: #F77463;
+  --lp-tone-blue: #62AEF0;
+  --lp-tone-amber: #FFC95E;
+  background-color: var(--lp-bg);
+  color: var(--lp-text);
+  color-scheme: dark;
+}
+
+/* Dark Mode Overrides for Landing Page Notion Components */
+.dark .landing-page [class*="text-[#111111]"] {
+  color: #FFFFFF !important;
+}
+
+.dark .landing-page [class*="text-[#5F5E5B]"] {
+  color: #A5A5A4 !important;
+}
+
+.dark .landing-page [class*="text-[#9B9A97]"] {
+  color: #73726E !important;
+}
+
+.dark .landing-page [class*="bg-white"] {
+  background-color: #20201F !important;
+}
+
+.dark .landing-page [class*="bg-[#F7F7F5]"] {
+  background-color: #262625 !important;
+}
+
+.dark .landing-page [class*="bg-[#F1F1EF]"] {
+  background-color: #2E2E2D !important;
+}
+
+.dark .landing-page [class*="bg-[#FBFBFA]"] {
+  background-color: #191918 !important;
+}
+
+.dark .landing-page [class*="border-[#E9E9E7]"] {
+  border-color: #2E2E2D !important;
+}
+
+.dark .landing-page [class*="border-[#D0D0CE]"] {
+  border-color: #3E3E3C !important;
+}
+
+.dark .landing-page [class*="divide-[#F1F1EF]"] > :not([hidden]) ~ :not([hidden]) {
+  border-color: #2E2E2D !important;
+}
+
+.dark .landing-page svg path[stroke="#111111"],
+.dark .landing-page svg circle[stroke="#111111"],
+.dark .landing-page svg rect[stroke="#111111"] {
+  stroke: #FFFFFF !important;
+}
+
+.dark .landing-page svg path[fill="#111111"],
+.dark .landing-page svg circle[fill="#111111"] {
+  fill: #FFFFFF !important;
+}
+
+.dark .landing-page [class*="bg-[#E3F0FD]"] {
+  background-color: rgba(0, 117, 222, 0.2) !important;
+}
+
+.dark .landing-page [class*="bg-[#DBEDDB]"] {
+  background-color: rgba(42, 157, 143, 0.2) !important;
+  color: #5ED9C8 !important;
+}
+
+.dark .landing-page [class*="bg-[#FDECC8]"] {
+  background-color: rgba(232, 162, 28, 0.2) !important;
+  color: #FFD27D !important;
+}
+
+.dark .landing-page [class*="bg-[#F5E0E9]"] {
+  background-color: rgba(229, 83, 61, 0.2) !important;
+  color: #FFA5B3 !important;
+}
+
+.dark .landing-page [class*="bg-[#D3E5EF]"] {
+  background-color: rgba(35, 131, 226, 0.2) !important;
+  color: #8CC4FF !important;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 35s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee {
+    animation: none;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+  }
 }
 
 @layer base {
@@ -122,9 +290,7 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground;
-  }
-  html {
-    @apply font-sans;
+    @apply bg-background text-foreground antialiased selection:bg-primary/30 selection:text-white;
+    font-feature-settings: "rlig" 1, "calt" 1;
   }
 }
