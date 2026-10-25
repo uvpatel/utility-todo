@@ -8,6 +8,34 @@
       "when": 1778346213675,
       "tag": "0000_lethal_albert_cleary",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1792929244099,
+      "tag": "0001_lucky_whistler",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1792939175737,
+      "tag": "0002_parallel_korath",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "7",
+      "when": 1792944956532,
+      "tag": "0003_clammy_black_bolt",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "7",
+      "when": 1792946966638,
+      "tag": "0004_cuddly_random",
+      "breakpoints": true
     }
   ]
 }
